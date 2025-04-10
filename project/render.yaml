@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: hotel-management-website
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn project.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: project.settings
+    staticPublishPath: staticfiles
