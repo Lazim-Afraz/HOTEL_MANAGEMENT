@@ -12,9 +12,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-r)9ea4!o+^d(zizp^_0(83&ov_fv088-_vxn!kj94@6$z#lt+z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['hotel-management-wivt.onrender.com']
+ALLOWED_HOSTS = ['hotel-management-wivt.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -121,3 +121,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
