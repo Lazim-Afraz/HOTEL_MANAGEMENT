@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-r)9ea4!o+^d(zizp^_0(83&ov_fv088-_vxn!kj94@6$z#lt+z
 
 DEBUG = "True"
 
-ALLOWED_HOSTS = ['hotel-management-wivt.onrender.com']
+ALLOWED_HOSTS = ['hotel-management-wivt.onrender.com','127.0.0.1', 'localhost']
 
 
 # Application definition
