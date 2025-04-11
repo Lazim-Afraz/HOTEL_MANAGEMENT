@@ -1,10 +1,11 @@
 asgiref==3.8.1
+certifi==2025.1.31
+cloudinary==1.44.0
 Django==5.2
-django-bootstrap==0.2.4
+django-storages==1.14.6
 gunicorn==23.0.0
 packaging==24.2
-pillow==11.1.0
+six==1.17.0
 sqlparse==0.5.3
 tzdata==2025.2
-whitenoise==6.9.0
-# updated to include gunicorn and whitenoise
+urllib3==2.4.0
