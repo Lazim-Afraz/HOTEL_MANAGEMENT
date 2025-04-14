@@ -19,6 +19,6 @@ urlpatterns = [
     path('edit/<int:room_id>/', views.edit_room, name='edit_room'),
     path('bookings/', views.view_bookings, name='view_bookings'),
     path('bookings/approve/<int:booking_id>/', views.approve_booking, name='approve_booking'),
-
+    path('send-test-email/', test_email),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

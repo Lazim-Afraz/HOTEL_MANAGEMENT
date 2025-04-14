@@ -4,6 +4,8 @@ from .models import Room, Booking
 from .forms import AddRoomForm, BookingApprovalForm, RoomForm  # Import the AddRoomForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
+from django.core.mail import send_mail
+from django.http import HttpResponse
 
 @staff_member_required
 def admin_home(request):
@@ -106,3 +108,13 @@ def delete_room(request, id):
     
     # Redirect to the admin_home page after deletion
     return redirect('admin_home')
+
+def test_email(request):
+    send_mail(
+        subject='Hello from Django!',
+        message='This is a test email sent from your Django app using Gmail SMTP.',
+        from_email='your_email@gmail.com',
+        recipient_list=['recipient@example.com'],  # Change this to your actual email
+        fail_silently=False,
+    )
+    return HttpResponse("Email sent successfully!")
